@@ -8,6 +8,8 @@ const mongoose = require('mongoose');
 const app = express();
 app.use(cors());
 
+app.use(express.json());
+
 mongoose.connect(process.env.DB_URL);
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'mongo connection error'));
@@ -27,7 +29,7 @@ app.get('/', (req, res) => {
 
 app.get('/books', getBooks);
 
-async function getBooks(req, res) {
+async function getBooks(req, res, next) {
   try {
     const results = await Book.find();
     res.status(200).send(results);
@@ -37,3 +39,36 @@ async function getBooks(req, res) {
 }
 
 
+
+app.post('/books', postBooks);
+
+async function postBooks(req, res, next) {
+  console.log(req.body);
+  try {
+    const newBook = await Book.create(req.body);
+    res.status(200).send(newBook);
+  } catch (error) {
+    next(error);
+  }
+}
+
+app.delete('/books/:id', deleteBook);
+
+async function deleteBook(req, res, next) {
+  const id = req.params.id;
+  console.log(id)
+  try {
+    await Book.findByIdAndDelete(id);
+    res.status(200).send('Book deleted');
+  } catch (error) {
+    next(error);
+  }
+}
+
+app.get('*', (req, res) => {
+  res.status(404).send('Not Found');
+});
+
+// app.use((error, req, res) => {
+//   res.status(500).send(error.message);
+// })
