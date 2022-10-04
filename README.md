@@ -1,7 +1,7 @@
 # Project Name
 
 **Author**: Ian Forrester, Chris Fanucchi
-**Version**: 1.0.0
+**Version**: 1.2.0
 
 ## Overview
 
@@ -19,6 +19,8 @@ This app was created with JavaScript and uses a MongoDB database in the back-end
 
 10-03-2022 15:00 - Initial setup and connect to back-end DB.
 
+10-04-2022 16:00 Added C.D. functionality
+
 ## Estimates
 
 1. Name of feature: Initial setup and connection to Front-end.
@@ -26,6 +28,12 @@ This app was created with JavaScript and uses a MongoDB database in the back-end
    Start time: 14:00
    Finish time: 14:45
    Actual time needed to complete: 45 min.
+
+2. Name of feature: Add C.D. functionality
+   Estimate of time needed to complete: 2 hour
+   Start time: 13:30
+   Finish time: 16:00
+   Actual time needed to complete: 150 min.
 
 ## Credit and Collaborations
 
