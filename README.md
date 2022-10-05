@@ -1,7 +1,7 @@
 # Project Name
 
 **Author**: Ian Forrester, Chris Fanucchi
-**Version**: 1.2.0
+**Version**: 1.3.0
 
 ## Overview
 
@@ -34,6 +34,12 @@ This app was created with JavaScript and uses a MongoDB database in the back-end
    Start time: 13:30
    Finish time: 16:00
    Actual time needed to complete: 150 min.
+
+3. Name of feature: Add Put/Update to server. Added form on front end to update DB.
+   Estimate of time needed to complete: 2 hrs
+   Start time: 13:30
+   Finish time: 14:15
+   Actual time needed to complete: 45 min
 
 ## Credit and Collaborations
 
